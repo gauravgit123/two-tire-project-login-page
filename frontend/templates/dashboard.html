@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard, {{ session['username'] }}!</h1>
+    <h2>Admission Submissions</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+        </tr>
+        {% for admission in admissions %}
+            <tr>
+                <td>{{ admission[0] }}</td>
+                <td>{{ admission[1] }}</td>
+                <td>{{ admission[2] }}</td>
+                <td>{{ admission[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/logout">Logout</a></p>
+</body>
+</html>
