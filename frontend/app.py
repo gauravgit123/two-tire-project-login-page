@@ -9,7 +9,7 @@ def get_db_connection():
     return mysql.connector.connect(
         host="db",  # Docker service name for MySQL
         user="root",
-        password="password",
+        password="admin",
         database="admission_db"
     )
 
