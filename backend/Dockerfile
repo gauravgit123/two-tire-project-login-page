@@ -1,5 +1,5 @@
 # Use MySQL as the base image
-FROM mysql:5.7
+FROM mysql:latest
 
 # Set environment variables
 ENV MYSQL_ROOT_PASSWORD=admin
